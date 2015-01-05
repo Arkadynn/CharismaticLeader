@@ -6,7 +6,7 @@ public class Fortifiant extends Element {
 
 	public Fortifiant(String nom) {
 		super(nom);
-		// TODO Auto-generated constructor stub
+		// TODO FAIRE LE CONSTRUCTEUR
 	}
 
 }

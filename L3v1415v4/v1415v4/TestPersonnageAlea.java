@@ -5,6 +5,7 @@ import java.util.Random;
 
 import controle.Console;
 import element.Personnage;
+import element.personnage.Ghost;
 
 /**
  * Test de la Console avec un Element qui s'ajoute a l'Arene (apres lancement Arene et IHM). A lancer en plusieurs exemplaires.
@@ -23,10 +24,11 @@ public class TestPersonnageAlea {
 			
 			String ipArene = "localhost";
 			if(args.length != 0) if(args[1] != "") ipArene = args[1];
-	
-			Personnage bidule = new Personnage("Truc", 100, 200);
+	/*
+			Personnage bidule = new Personnage("Truc", 100, 200);*/
+			Personnage ghost = new Ghost ("The Lost");
 			Random r = new Random();
-			new Console(bidule, r.nextInt(100), r.nextInt(100), port, ipArene);
+			new Console(ghost, r.nextInt(100), r.nextInt(100), port, ipArene);
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}

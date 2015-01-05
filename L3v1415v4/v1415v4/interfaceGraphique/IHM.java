@@ -28,7 +28,6 @@ import serveur.IArene;
 /**
  * Definit l'interface graphique. Allure des fenetres, connexion, recup des elements sur l'arene et les dessines (a partir de VueElement)
  */
-// Bonjour le monde 42
 public class IHM extends JFrame {
 
 	private static final long serialVersionUID = 1L;

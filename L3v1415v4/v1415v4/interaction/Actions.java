@@ -83,25 +83,31 @@ public class Actions implements IActions {
 		Hashtable<String, Integer> valeursPot = pot.getElement().getCaract();
 		
 		Enumeration<String> enumCaract = valeursPot.keys();
-		
-		while (enumCaract.hasMoreElements()) {
-			String s = enumCaract.nextElement();
-			Integer val = per.getElement().getCaract(s);
-			
-			if (val != null) {
-				nouvellesValeursPer.put(s, val + valeursPot.get(s));
+		System.out.println(pot.getElement().getCaract("assassine"));
+		if(pot.getElement().getCaract("assassine") != null){
+			System.out.println("mabite");
+			per.perdreVie(1);
+		}else{
+			while (enumCaract.hasMoreElements()) {
+				String s = enumCaract.nextElement();
+				Integer val = per.getElement().getCaract(s);
+				
+				if (val != null) {
+					nouvellesValeursPer.put(s, val + valeursPot.get(s));
+				}
+				
+				//valeursPot.put(s, 0); //on vide toute la potion, meme si elle ne correspond pas aux caract. du perso ?
+				
+				//pot.majCaractElement(valeursPot);
 			}
 			
-			//valeursPot.put(s, 0); //on vide toute la potion, meme si elle ne correspond pas aux caract. du perso ?
-			
-			//pot.majCaractElement(valeursPot);
+			// mise a jour du personnage
+			per.majCaractElement(nouvellesValeursPer);
 		}
-		
-		// mise a jour du personnage
-		per.majCaractElement(nouvellesValeursPer);
 		
     	//mets a jour l'etat de la potion comme ramassee (plus de vie)
     	pot.perdreVie(1);
+		//pot.getElement().setVie(0);
 	}
 
 	/**

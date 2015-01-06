@@ -4,7 +4,12 @@ import element.Personnage;
 
 public class Mage extends Personnage {
 
-	public Mage(String nom, int force, int charisme) {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Mage(String nom) {
 		super(nom, 0, 300);
 	}
 

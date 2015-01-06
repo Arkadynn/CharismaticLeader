@@ -12,7 +12,6 @@ public class DentsBlanches extends Potion {
 
 	public DentsBlanches() {
 		super("Dents Blances", -25, 100);
-		// TODO Auto-generated constructor stub
 	}
 
 }

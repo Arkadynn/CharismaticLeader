@@ -63,12 +63,12 @@ public class Barratinage implements IDuel {
 		try {
 			if(memeLeader(attaquant, defenseur) || isLeader(attaquant, defenseur)) {
 				// s'ils ont le meme leader ou que le defenseur est dans l'equipe de l'attaquant, rien ne se passe
-				System.out.println("Rien ne se passe");
+				System.out.println("On est dans le même équipe");
 				
 			} else if (isLeader(defenseur, attaquant)) {
 				if(attCharisme > defCharisme) {
 					// coup d'etat
-					System.out.println(attaquant.getRefRMI() + " realise un coup d'etat contre " + defenseur.getRefRMI());
+					System.out.println(attaquant.getRefRMI() + " barratine " + defenseur.getRefRMI());
 				} else {
 					// coup d'etat echoue
 					// TODO Fuire
